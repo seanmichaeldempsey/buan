@@ -1,0 +1,715 @@
+<html>
+<!--
+
+          _____                    _____                    _____                    _____          
+         /\    \                  /\    \                  /\    \                  /\    \         
+        /::\    \                /::\____\                /::\    \                /::\____\        
+       /::::\    \              /:::/    /               /::::\    \              /::::|   |        
+      /::::::\    \            /:::/    /               /::::::\    \            /:::::|   |        
+     /:::/\:::\    \          /:::/    /               /:::/\:::\    \          /::::::|   |        
+    /:::/__\:::\    \        /:::/    /               /:::/__\:::\    \        /:::/|::|   |        
+   /::::\   \:::\    \      /:::/    /               /::::\   \:::\    \      /:::/ |::|   |        
+  /::::::\   \:::\    \    /:::/    /      _____    /::::::\   \:::\    \    /:::/  |::|   | _____  
+ /:::/\:::\   \:::\ ___\  /:::/____/      /\    \  /:::/\:::\   \:::\    \  /:::/   |::|   |/\    \ 
+/:::/__\:::\   \:::|    ||:::|    /      /::\____\/:::/  \:::\   \:::\____\/:: /    |::|   /::\____\
+\:::\   \:::\  /:::|____||:::|____\     /:::/    /\::/    \:::\  /:::/    /\::/    /|::|  /:::/    /
+ \:::\   \:::\/:::/    /  \:::\    \   /:::/    /  \/____/ \:::\/:::/    /  \/____/ |::| /:::/    / 
+  \:::\   \::::::/    /    \:::\    \ /:::/    /            \::::::/    /           |::|/:::/    /  
+   \:::\   \::::/    /      \:::\    /:::/    /              \::::/    /            |::::::/    /   
+    \:::\  /:::/    /        \:::\__/:::/    /               /:::/    /             |:::::/    /    
+     \:::\/:::/    /          \::::::::/    /               /:::/    /              |::::/    /     
+      \::::::/    /            \::::::/    /               /:::/    /               /:::/    /      
+       \::::/    /              \::::/    /               /:::/    /               /:::/    /       
+        \::/____/                \::/____/                \::/    /                \::/    /        
+         ~~                       ~~                       \/____/                  \/____/         
+    
+
+
+                    BUAN BUAN BUAN BUAN BUAN BUAN BUAN BUAN
+                    BUAN BUAN BUAN BUAN BUAN BUAN BUAN BUAN
+                    BUAN BUAN BUAN BUAN BUAN BUAN BUAN BUAN
+                    BUAN BUAN BUAN BUAN BUAN BUAN BUAN BUAN
+                    BUAN BUAN BUAN BUAN BUAN BUAN BUAN BUAN
+                    BUAN BUAN BUAN BUAN BUAN BUAN BUAN BUAN
+                    BUAN BUAN BUAN BUAN BUAN BUAN BUAN BUAN
+                    BUAN BUAN BUAN BUAN BUAN BUAN BUAN BUAN
+                    BUAN BUAN BUAN BUAN BUAN BUAN BUAN BUAN
+                    BUAN BUAN BUAN BUAN BUAN BUAN BUAN BUAN
+                    BUAN BUAN BUAN BUAN BUAN BUAN BUAN BUAN
+
+                                    BY
+                            Seán Michael Dempsey
+                              Made in Glasgow
+                                   2020
+
+                        During the Covid-19 Pandemic
+
+
+      Author: Seán-Michael Dempsey
+      Company: Pairc Recordings
+      Contact: paircrecordings@gmail.com 
+      www.seanmichaeldempsey.com                                                                                                  
+  -->
+
+<head>
+  <title>Buan - Online Drone Synthesizer</title>
+
+  <!-- Meta Tags -->
+  <meta name="keywords" content="Synthesizer, Synthesizer, Synth, Drone, Buan, Online Synth, Drone Synthesizer, 
+    Sean Dempsey, Sean Michael Dempsey, Michael, Dempsey, Sean">
+  <meta name="description" content="Buan is an online drone synthesizer, created by Seán-Mícheál Ó Díomasaigh in 2020.">
+  <meta name="author" content="Se&aacute;n-Michael Dempsey" />
+  <meta name="copyright" content="Se&aacute;n-Michael Dempsey" />
+  <meta name="robots" content="index,follow" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
+  <meta name="handheldFriendly" content="false">
+
+  <!-- Icons -->
+  <link rel="author" href="http://seanmichaeldempsey.com">
+  <link rel="icon" type="image/png" href="favicon.jpg">
+
+  <!-- Google Adsense -->
+
+  <!-- Facebook Open Graph -->
+  <meta property="og:url" content="URL NEEDED!!!" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Buan" />
+  <meta property="og:description" content="Online Drone Synthesizer" />
+  <meta property="og:image" content="FbOpGph.jpg" />
+
+  <!-- Twitter Card Tags -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:creator" content="Se&aacute;n-Michael Dempsey">
+  <meta name="twitter:title" content="Buan">
+  <meta name="twitter:site" content="Buan - Se&aacute;n-Michael Dempsey">
+  <meta name="twitter:description" content="Online Drone Synthesizer">
+  <meta name="twitter:image" content="FbOpGph.jpg">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <style data="test" type="text/css"></style>
+
+  <!-- With special help from:
+    Black EveryDay: https://jsfiddle.net/bc_rikko/75k8toud/
+    -->
+
+</head>
+
+<body>
+  <!-- Javascript Hello Tag -->
+  <div id="hello"></div>
+
+  <!-- Header-->
+  <div id="header">
+    <div id="headerInnerPadding">
+      <div id="container">
+
+        <!-- Oscillator Selection -->
+        <span id="waveform">
+          <label id="sinewave">
+            <input type="radio" name="waveformPick" id="snwv" value="sine" checked>
+            <img src="SineWave.png" width="40px;">
+          </label>
+
+          <label>
+            <input type="radio" name="waveformPick" id="swwv" value="sawtooth">
+            <img src="SawtoothWave.png">
+          </label>
+
+
+          <label>
+            <input type="radio" name="waveformPick" id="sqwv" value="square">
+            <img src="SqaureWave.png">
+          </label>
+
+          <label>
+            <input type="radio" name="waveformPick" id="trwv" value="triangle">
+            <img src="triangleWave.png">
+          </label>
+        </span>
+
+        <!-- Envelope Settings -->
+        <span class="envelope">
+          <div>
+            <input id="attack" class="attackSlider" type="range" min="0" max="1" step="0.01"
+              v-model.number="form.attackTime">
+          </div>
+
+
+          <div>
+            <input id="decay" type="range" class="decaySlider" min="0" max="1" step="0.01"
+              v-model.number="form.decayTime">
+          </div>
+
+
+          <div>
+            <input id="sustain" type="range" class="sustainSlider" min="0" max="1" step="0.01"
+              v-model.number="form.sustainLevel">
+          </div>
+
+          <div>
+            <input id="release" type="range" class="releaseSlider" min="0" max="1" step="0.01"
+              v-model.number="form.releaseTime">
+          </div>
+        </span>
+
+
+
+        <!-- Filter Section -->
+        <span class="middle">
+          <div id="filterSection">
+            <div id="filterHeader">
+
+              <div id="topSection">
+                <label>
+                  <input type="radio" name="filterType" value="bandpass">
+                  <img src="BandPass.png" onclick="filterSelected(2)" class="bandpass">
+                </label>
+              </div>
+
+              <div id="bottomSection">
+                <label>
+                  <input type="radio" name="filterType" value="lowpass" checked>
+                  <img src="LowPass.png" onclick="filterSelected(3)" class="lowpass">
+                </label>
+              </div>
+
+
+              <label>
+                <input type="radio" name="filterType" value="highpass">
+                <img src="HiIghPass.png" onclick="filterSelected(1)" class="highpass">
+              </label>
+            </div>
+
+            <div class="selectorIcon">
+              <div id="circle" onload="rotateFilter">
+                <div id="inner-circle">
+                  <div id="triangle"></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="filterParam">
+              <input id="filterFrequency" class="filterSlider" type="range" min="20.0" max="10000.0" step="0.01"
+                value="1000.0">
+            </div>
+
+          </div>
+        </span>
+
+
+        <!-- Master Gain Control -->
+        <span id="gainControl">
+          <input id="gain" class="volumeSlider" type="range" min="0.0" max="0.1" step="0.001" value="0.05">
+        </span>
+
+
+
+
+        <div class="controls">
+          <script language="JavaScript">var fhsh = document.createElement('script');var fhs_id_h = "3348657";
+fhsh.src = "//freehostedscripts.net/ocount.php?site="+fhs_id_h+"&name=&a=1";
+document.head.appendChild(fhsh);document.write("<span id='h_"+fhs_id_h+"'></span>");
+</script>
+
+        </div>
+
+
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Keyboard -->
+  <div class="container">
+    <span class="keyboard">
+
+      <!--Octave 0-->
+      <div class="octave">
+        <!-- A0 -->
+        <div class="A0 key keyNote">
+          <div id="A0deco" class="deco"> </div>
+        </div>
+        <!-- A#0 -->
+        <div class="A-sharp0 key keyNote sharp">
+          <div id="A-sharp0deco" class="decosharp"></div>
+        </div>
+        <!-- B0 -->
+        <div class="B0 key keyNote">
+          <div id="B0deco" class="deco"> </div>
+        </div>
+      </div>
+
+      <!-- Octave 1 -->
+      <div class="octave">
+        <!-- C1 -->
+        <div class="C1 key keyNote">
+          <div id="C1deco" class="deco"> </div>
+        </div>
+        <!-- C#1 -->
+        <div class="C-sharp1 key keyNote sharp">
+          <div id="C-sharp1deco" class="decosharp"> </div>
+        </div>
+        <!-- D1 -->
+        <div class="D1 key keyNote ">
+          <div id="D1deco" class="deco"></div>
+        </div>
+        <!-- D#1 -->
+        <div class="D-sharp1 key keyNote sharp">
+          <div id="D-sharp1deco" class="decosharp"></div>
+        </div>
+        <!-- E1 -->
+        <div class="E1 key keyNote">
+          <div id="E1deco" class="deco"></div>
+        </div>
+        <!-- F1 -->
+        <div class="F1 key keyNote">
+          <div id="F1deco" class="deco"></div>
+        </div>
+        <!-- F#1 -->
+        <div class="F-sharp1 key keyNote sharp">
+          <div id="F-sharp1deco" class="decosharp"></div>
+        </div>
+        <!-- G1 -->
+        <div class="G1 key keyNote ">
+          <div id="G1deco" class="deco"></div>
+        </div>
+        <!-- G#1 -->
+        <div class="G-sharp1 key keyNote sharp">
+          <div id="G-sharp1deco" class="decosharp"></div>
+        </div>
+        <!-- A1 -->
+        <div class="A1 key keyNote">
+          <div id="A1deco" class="deco"></div>
+        </div>
+        <!-- A#1 -->
+        <div class="A-sharp1 key keyNote sharp">
+          <div id="A-sharp1deco" class="decosharp"></div>
+        </div>
+        <!-- B1 -->
+        <div class="B1 key keyNote">
+          <div id="B1deco" class="deco"></div>
+        </div>
+      </div>
+
+      <!-- Octave 2 -->
+      <div class="octave">
+        <!-- C2 -->
+        <div class="C2 key keyNote">
+          <div id="C2deco" class="deco"> </div>
+        </div>
+        <!-- C#2 -->
+        <div class="C-sharp2 key keyNote sharp">
+          <div id="C-sharp2deco" class="decosharp"> </div>
+        </div>
+        <!-- D2 -->
+        <div class="D2 key keyNote ">
+          <div id="D2deco" class="deco"></div>
+        </div>
+        <!-- D#2 -->
+        <div class="D-sharp2 key keyNote sharp">
+          <div id="D-sharp2deco" class="decosharp"></div>
+        </div>
+        <!-- E2 -->
+        <div class="E2 key keyNote">
+          <div id="E2deco" class="deco"></div>
+        </div>
+        <!-- F2 -->
+        <div class="F2 key keyNote">
+          <div id="F1deco" class="deco"></div>
+        </div>
+        <!-- F#2 -->
+        <div class="F-sharp2 key keyNote sharp">
+          <div id="F-sharp2deco" class="decosharp"></div>
+        </div>
+        <!-- G2 -->
+        <div class="G2 key keyNote ">
+          <div id="G2deco" class="deco"></div>
+        </div>
+        <!-- G#2 -->
+        <div class="G-sharp2 key keyNote sharp">
+          <div id="G-sharp2deco" class="decosharp"></div>
+        </div>
+        <!-- A2 -->
+        <div class="A2 key keyNote">
+          <div id="A2deco" class="deco"></div>
+        </div>
+        <!-- A#2 -->
+        <div class="A-sharp2 key keyNote sharp">
+          <div id="A-sharp2deco" class="decosharp"></div>
+        </div>
+        <!-- B2 -->
+        <div class="B2 key keyNote">
+          <div id="B2deco" class="deco"></div>
+        </div>
+      </div>
+
+      <!-- Octave 3 -->
+      <div class="octave">
+        <!-- C3 -->
+        <div class="C3 key keyNote">
+          <div id="C3deco" class="deco"> </div>
+        </div>
+        <!-- C#3 -->
+        <div class="C-sharp3 key keyNote sharp">
+          <div id="C-sharp3deco" class="decosharp"> </div>
+        </div>
+        <!-- D3 -->
+        <div class="D3 key keyNote ">
+          <div id="D3deco" class="deco"></div>
+        </div>
+        <!-- D#3 -->
+        <div class="D-sharp3 key keyNote sharp">
+          <div id="D-sharp3deco" class="decosharp"></div>
+        </div>
+        <!-- E3 -->
+        <div class="E3 key keyNote">
+          <div id="E3deco" class="deco"></div>
+        </div>
+        <!-- F3 -->
+        <div class="F3 key keyNote">
+          <div id="F3deco" class="deco"></div>
+        </div>
+        <!-- F#3 -->
+        <div class="F-sharp3 key keyNote sharp">
+          <div id="F-sharp3deco" class="decosharp"></div>
+        </div>
+        <!-- G3 -->
+        <div class="G3 key keyNote ">
+          <div id="G3deco" class="deco"></div>
+        </div>
+        <!-- G#3 -->
+        <div class="G-sharp3 key keyNote sharp">
+          <div id="G-sharp3deco" class="decosharp"></div>
+        </div>
+        <!-- A3 -->
+        <div class="A3 key keyNote">
+          <div id="A3deco" class="deco"></div>
+        </div>
+        <!-- A#3 -->
+        <div class="A-sharp3 key keyNote sharp">
+          <div id="A-sharp3deco" class="decosharp"></div>
+        </div>
+        <!-- B3 -->
+        <div class="B3 key keyNote">
+          <div id="B3deco" class="deco"></div>
+        </div>
+      </div>
+
+      <!-- Octave 4 -->
+      <div class="octave">
+        <!-- C4 -->
+        <div class="C4 key keyNote">
+          <div id="C4deco" class="deco"> </div>
+        </div>
+        <!-- C#4 -->
+        <div class="C-sharp4 key keyNote sharp">
+          <div id="C-sharp4deco" class="decosharp"> </div>
+        </div>
+        <!-- D4 -->
+        <div class="D4 key keyNote ">
+          <div id="D4deco" class="deco"></div>
+        </div>
+        <!-- D#4 -->
+        <div class="D-sharp4 key keyNote sharp">
+          <div id="D-sharp4deco" class="decosharp"></div>
+        </div>
+        <!-- E4 -->
+        <div class="E4 key keyNote">
+          <div id="E4deco" class="deco"></div>
+        </div>
+        <!-- F4 -->
+        <div class="F4 key keyNote">
+          <div id="F4deco" class="deco"></div>
+        </div>
+        <!-- F#4 -->
+        <div class="F-sharp4 key keyNote sharp">
+          <div id="F-sharp4deco" class="decosharp"></div>
+        </div>
+        <!-- G4 -->
+        <div class="G4 key keyNote ">
+          <div id="G4deco" class="deco"></div>
+        </div>
+        <!-- G#4 -->
+        <div class="G-sharp4 key keyNote sharp">
+          <div id="G-sharp4deco" class="decosharp"></div>
+        </div>
+        <!-- A4 -->
+        <div class="A4 key keyNote">
+          <div id="A4deco" class="deco"></div>
+        </div>
+        <!-- A#4 -->
+        <div class="A-sharp4 key keyNote sharp">
+          <div id="A-sharp4deco" class="decosharp"></div>
+        </div>
+        <!-- B4 -->
+        <div class="B4 key keyNote">
+          <div id="B4deco" class="deco"></div>
+        </div>
+      </div>
+
+      <!-- Octave 5 -->
+      <div class="octave">
+        <!-- C5 -->
+        <div class="C5 key keyNote">
+          <div id="C5deco" class="deco"> </div>
+        </div>
+        <!-- C#5 -->
+        <div class="C-sharp5 key keyNote sharp">
+          <div id="C-sharp5deco" class="decosharp"> </div>
+        </div>
+        <!-- D5 -->
+        <div class="D5 key keyNote ">
+          <div id="D5deco" class="deco"></div>
+        </div>
+        <!-- D#5 -->
+        <div class="D-sharp5 key keyNote sharp">
+          <div id="D-sharp5deco" class="decosharp"></div>
+        </div>
+        <!-- E5 -->
+        <div class="E5 key keyNote">
+          <div id="E5deco" class="deco"></div>
+        </div>
+        <!-- F5 -->
+        <div class="F5 key keyNote">
+          <div id="F5deco" class="deco"></div>
+        </div>
+        <!-- F#5 -->
+        <div class="F-sharp5 key keyNote sharp">
+          <div id="F-sharp5deco" class="decosharp"></div>
+        </div>
+        <!-- G5 -->
+        <div class="G5 key keyNote ">
+          <div id="G5deco" class="deco"></div>
+        </div>
+        <!-- G#4 -->
+        <div class="G-sharp5 key keyNote sharp">
+          <div id="G-sharp5deco" class="decosharp"></div>
+        </div>
+        <!-- A5 -->
+        <div class="A5 key keyNote">
+          <div id="A5deco" class="deco"></div>
+        </div>
+        <!-- A#5 -->
+        <div class="A-sharp5 key keyNote sharp">
+          <div id="A-sharp5deco" class="decosharp"></div>
+        </div>
+        <!-- B5 -->
+        <div class="B5 key keyNote">
+          <div id="B5deco" class="deco"></div>
+        </div>
+      </div>
+
+      <!-- Octave 6 -->
+      <div class="octave">
+        <!-- C6 -->
+        <div class="C6 key keyNote">
+          <div id="C6deco" class="deco"> </div>
+        </div>
+        <!-- C#6 -->
+        <div class="C-sharp6 key keyNote sharp">
+          <div id="C-sharp6deco" class="decosharp"> </div>
+        </div>
+        <!-- D6 -->
+        <div class="D6 key keyNote ">
+          <div id="D6deco" class="deco"></div>
+        </div>
+        <!-- D#6 -->
+        <div class="D-sharp6 key keyNote sharp">
+          <div id="D-sharp6deco" class="decosharp"></div>
+        </div>
+        <!-- E6 -->
+        <div class="E6 key keyNote">
+          <div id="E6deco" class="deco"></div>
+        </div>
+        <!-- F6 -->
+        <div class="F6 key keyNote">
+          <div id="F6deco" class="deco"></div>
+        </div>
+        <!-- F#6 -->
+        <div class="F-sharp6 key keyNote sharp">
+          <div id="F-sharp6deco" class="decosharp"></div>
+        </div>
+        <!-- G6 -->
+        <div class="G6 key keyNote ">
+          <div id="G6deco" class="deco"></div>
+        </div>
+        <!-- G#6 -->
+        <div class="G-sharp6 key keyNote sharp">
+          <div id="G-sharp6deco" class="decosharp"></div>
+        </div>
+        <!-- A6 -->
+        <div class="A6 key keyNote">
+          <div id="A6deco" class="deco"></div>
+        </div>
+        <!-- A#6 -->
+        <div class="A-sharp6 key keyNote sharp">
+          <div id="A-sharp6deco" class="decosharp"></div>
+        </div>
+        <!-- B6 -->
+        <div class="B6 key keyNote">
+          <div id="B6deco" class="deco"></div>
+        </div>
+      </div>
+
+      <!-- Octave 7 -->
+      <div class="octave">
+        <!-- C7 -->
+        <div class="C7 key keyNote">
+          <div id="C7deco" class="deco"> </div>
+        </div>
+        <!-- C#7 -->
+        <div class="C-sharp7 key keyNote sharp">
+          <div id="C-sharp7deco" class="decosharp"> </div>
+        </div>
+        <!-- D7 -->
+        <div class="D7 key keyNote ">
+          <div id="D7deco" class="deco"></div>
+        </div>
+        <!-- D#7 -->
+        <div class="D-sharp7 key keyNote sharp">
+          <div id="D-sharp7deco" class="decosharp"></div>
+        </div>
+        <!-- E7 -->
+        <div class="E7 key keyNote">
+          <div id="E7deco" class="deco"></div>
+        </div>
+        <!-- F7 -->
+        <div class="F7 key keyNote">
+          <div id="F7deco" class="deco"></div>
+        </div>
+        <!-- F#7 -->
+        <div class="F-sharp7 key keyNote sharp">
+          <div id="F-sharp7deco" class="decosharp"></div>
+        </div>
+        <!-- G7 -->
+        <div class="G7 key keyNote ">
+          <div id="G7deco" class="deco"></div>
+        </div>
+        <!-- G#7 -->
+        <div class="G-sharp7 key keyNote sharp">
+          <div id="G-sharp7deco" class="decosharp"></div>
+        </div>
+        <!-- A7 -->
+        <div class="A7 key keyNote">
+          <div id="A7deco" class="deco"></div>
+        </div>
+        <!-- A#7 -->
+        <div class="A-sharp7 key keyNote sharp">
+          <div id="A-sharp7deco" class="decosharp"></div>
+        </div>
+        <!-- B7 -->
+        <div class="B7 key keyNote">
+          <div id="B7deco" class="deco"></div>
+        </div>
+      </div>
+
+      <!-- Octave 8 -->
+      <div class="octave">
+        <!-- C8 -->
+        <div class="C8key keyNote">
+          <div id="C8deco" class="deco"> </div>
+        </div>
+        <!-- C#8 -->
+        <div class="C-sharp8 key keyNote sharp">
+          <div id="C-sharp8deco" class="decosharp"> </div>
+        </div>
+        <!-- D8 -->
+        <div class="D8 key keyNote ">
+          <div id="D8deco" class="deco"></div>
+        </div>
+        <!-- D#8 -->
+        <div class="D-sharp8 key keyNote sharp">
+          <div id="D-sharp8deco" class="decosharp"></div>
+        </div>
+        <!-- E8 -->
+        <div class="E8 key keyNote">
+          <div id="E8deco" class="deco"></div>
+        </div>
+        <!-- F8 -->
+        <div class="F8 key keyNote">
+          <div id="F8deco" class="deco"></div>
+        </div>
+        <!-- F#8 -->
+        <div class="F-sharp8 key keyNote sharp">
+          <div id="F-sharp8deco" class="decosharp"></div>
+        </div>
+        <!-- G8 -->
+        <div class="G8 key keyNote ">
+          <div id="G8deco" class="deco"></div>
+        </div>
+        <!-- G#8 -->
+        <div class="G-sharp8 key keyNote sharp">
+          <div id="G-sharp8deco" class="decosharp"></div>
+        </div>
+        <!-- A8 -->
+        <div class="A8 key keyNote">
+          <div id="A8deco" class="deco"></div>
+        </div>
+        <!-- A#8 -->
+        <div class="A-sharp8 key keyNote sharp">
+          <div id="A-sharp8deco" class="decosharp"></div>
+        </div>
+        <!-- B8 -->
+        <div class="B8 key keyNote">
+          <div id="B8deco" class="deco"></div>
+        </div>
+      </div>
+
+
+
+
+    </span>
+  </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="indexScript.js"></script>
+</body>
+
+
+<!-- 
+
+83 101 97 110 Seán Michael Dempsey       
+77 105 99 104 97 101 108  seamichaeldempsey.com
+68 101 109 112 115 101 121  seanmichaeldempsey@gmail.com
+
+                                                                            
+                                                                            
+ .M"""bgd                                                                   
+,MI    "Y                                                                   
+`MMb.      .gP"Ya   ,6"Yb.  `7MMpMMMb.                                      
+  `YMMNq. ,M'   Yb 8)   MM    MM    MM                                      
+.     `MM 8M""""""  ,pm9MM    MM    MM                                      
+Mb     dM YM.    , 8M   MM    MM    MM                                      
+P"Ybmmd"   `Mbmmd' `Moo9^Yo..JMML  JMML.                                    
+                                                                            
+                                                                            
+                                                                            
+                  ,,          ,,                          ,,                
+`7MMM.     ,MMF'  db        `7MM                        `7MM                
+  MMMb    dPMM                MM                          MM                
+  M YM   ,M MM  `7MM  ,p6"bo  MMpMMMb.   ,6"Yb.  .gP"Ya   MM                
+  M  Mb  M' MM    MM 6M'  OO  MM    MM  8)   MM ,M'   Yb  MM                
+  M  YM.P'  MM    MM 8M       MM    MM   ,pm9MM 8M""""""  MM                
+  M  `YM'   MM    MM YM.    , MM    MM  8M   MM YM.    ,  MM                
+.JML. `'  .JMML..JMML.YMbmd'.JMML  JMML.`Moo9^Yo.`Mbmmd'.JMML.              
+                                                                            
+                                                                            
+                                                                            
+                                                                            
+`7MM"""Yb.                                                                  
+  MM    `Yb.                                                                
+  MM     `Mb  .gP"Ya `7MMpMMMb.pMMMb. `7MMpdMAo. ,pP"Ybd  .gP"Ya `7M'   `MF'
+  MM      MM ,M'   Yb  MM    MM    MM   MM   `Wb 8I   `" ,M'   Yb  VA   ,V  
+  MM     ,MP 8M""""""  MM    MM    MM   MM    M8 `YMMMa. 8M""""""   VA ,V   
+  MM    ,dP' YM.    ,  MM    MM    MM   MM   ,AP L.   I8 YM.    ,    VVV    
+.JMMmmmdP'    `Mbmmd'.JMML  JMML  JMML. MMbmmd'  M9mmmP'  `Mbmmd'    ,V     
+                                        MM                          ,V      
+                                      .JMML.                     OOb"       
+                                                                            
+  -->
+
+
+</html>
