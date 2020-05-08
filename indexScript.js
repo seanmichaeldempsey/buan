@@ -10,6 +10,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
   // Default Nodes
   const gain = audioCtx.createGain();
+  var analyser = audioCtx.createAnalyser();
 
   // Default Waveform
   let waveform = 'sine'
@@ -170,14 +171,38 @@ document.addEventListener("DOMContentLoaded", function (event) {
   }
 
   // Default Connections
-  gain.connect(audioCtx.destination);
+  gain.connect(analyser);
+  analyser.connect(audioCtx.destination);
 
   //Event Listeners for Interface
-  const waveformControl = document.getElementById('waveform')
+  const waveformControl = document.getElementById('waveform');
+  const waveformSelector = document.getElementById('whiteBackground');
   waveformControl.addEventListener('change', function (event) {
-    waveform = event.target.value
+    waveform = event.target.value;
     console.log(waveform);
+    waveformBackground(waveform);
   });
+
+  function waveformBackground(waveName) {
+    if(waveName==="sawtooth") {
+      waveformSelector.style.left = "123px";
+      waveformSelector.style.top= "20px";
+    }
+    if(waveName==="sine") {
+      waveformSelector.style.left = "20px";
+      waveformSelector.style.top= "20px";
+    }
+
+    if(waveName==="square") {
+      waveformSelector.style.left = "20px";
+      waveformSelector.style.top= "124px";
+    }
+
+    if(waveName==="triangle") {
+      waveformSelector.style.left = "123px";
+      waveformSelector.style.top= "124px";
+    }
+  }
 
   const gainControl = document.getElementById('gain')
   gainControl.addEventListener('change', function (event) {
@@ -571,3 +596,35 @@ new Vue({
     },
   }
   */
+
+ analyser.fftSize = 2048;
+ var bufferLength = analyser.frequencyBinCount;
+ var dataArray = new Uint8Array(bufferLength);
+ canvasCtx.clearRect(0, 0, 100, 50);
+ function draw() {
+  var drawVisual = requestAnimationFrame(draw);
+  analyser.getByteTimeDomainData(dataArray);
+  canvasCtx.fillStyle = 'rgb(200, 200, 200)';
+canvasCtx.fillRect(0, 0, 100, 50);
+canvasCtx.lineWidth = 2;
+canvasCtx.strokeStyle = 'rgb(0, 0, 0)';
+canvasCtx.beginPath();
+var sliceWidth = 100 * 1.0 / bufferLength;
+var x = 0;
+for(var i = 0; i < bufferLength; i++) {
+   
+  var v = dataArray[i] / 128.0;
+  var y = v * 50/2;
+
+  if(i === 0) {
+    canvasCtx.moveTo(x, y);
+  } else {
+    canvasCtx.lineTo(x, y);
+  }
+
+  x += sliceWidth;
+}
+canvasCtx.lineTo(canvas.width, canvas.height/2);
+canvasCtx.stroke();
+};
+draw();

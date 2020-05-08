@@ -67,7 +67,7 @@
 
   <!-- Icons -->
   <link rel="author" href="http://seanmichaeldempsey.com">
-  <link rel="icon" type="image/png" href="favicon.jpg">
+  <link rel="icon" type="image/png" href="smdfavicon.png">
 
   <!-- Google Adsense -->
 
@@ -92,7 +92,8 @@
   <style data="test" type="text/css"></style>
 
   <!-- Google Adsense -->
-  <script data-ad-client="ca-pub-5497730580406813" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <script data-ad-client="ca-pub-5497730580406813" async
+    src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 
   <!-- With special help from:
     Black EveryDay: https://jsfiddle.net/bc_rikko/75k8toud/
@@ -102,6 +103,8 @@
 
 <body>
   <!-- Javascript Hello Tag -->
+
+  <canvas id="canvas"></canvas>
   <div id="hello"></div>
 
   <!-- Header-->
@@ -111,6 +114,10 @@
 
         <!-- Oscillator Selection -->
         <span id="waveform">
+          <div id="whiteBackground"></div>
+          <div id="board-x"></div>
+          <div id="board-y"></div>
+          <div id="overall"></div>
           <label id="sinewave">
             <input type="radio" name="waveformPick" id="snwv" value="sine" checked>
             <img src="SineWave.png" width="40px;">
@@ -212,11 +219,14 @@
 
 
         <div class="controls">
-          <script language="JavaScript">var fhsh = document.createElement('script');var fhs_id_h = "3348657";
-fhsh.src = "//freehostedscripts.net/ocount.php?site="+fhs_id_h+"&name=&a=1";
-document.head.appendChild(fhsh);document.write("<span id='h_"+fhs_id_h+"'></span>");
-</script>
 
+          <div class="hitCounter">
+            <script language="JavaScript">
+              var fhsh = document.createElement('script'); var fhs_id_h = "3348657";
+              fhsh.src = "//freehostedscripts.net/ocount.php?site=" + fhs_id_h + "&name=&a=1";
+              document.head.appendChild(fhsh); document.write("<span id='h_" + fhs_id_h + "'></span>");
+            </script>
+          </div>
         </div>
 
 
