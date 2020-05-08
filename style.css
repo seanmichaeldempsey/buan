@@ -11,6 +11,11 @@ body {
     z-index: -5;
 }
 
+body:after{
+  display:none;
+  content: url(volumeSlider.png) url(volumeSlider2.png) url(attack.jpg) url(decay.png) url(sustain.png) url(release.png);
+ }
+
 canvas {
   margin-top: 300px;
   margin-right: 100px;
